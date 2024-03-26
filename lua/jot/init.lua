@@ -4,7 +4,7 @@ local M = {}
 
 M.config = {
   quit_key = "q",
-  notes_dir = vim.fn.stdpath("cache") .. "/jot",
+  notes_dir = vim.fn.stdpath("data") .. "/jot",
   win_opts = {
     split = "right",
     focusable = false,
