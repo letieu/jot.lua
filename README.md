@@ -1,6 +1,6 @@
 # Jot.lua
 
-Jot down everything about the *project* in one place.
+Jot down everything about the **project** in one place.
 
 **Features:**
 
