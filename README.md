@@ -8,7 +8,7 @@ persisted.
 **Features:**
 
 * Jot per project in a `markdown` file.
-* Customizable jot window
+* Customizable jot window (Only for neovim 0.10+)
 
 ## Installation
 
@@ -53,6 +53,22 @@ Default config
     split = "right",
     focusable = false,
   },
+}
+```
+
+Customize config to open in floating window
+```lua
+
+{
+  win_opts = {
+    relative = "editor",
+    width = 100,
+    height = 30,
+    row = 10,
+    col = 50,
+  },
+}
+```
 }
 ```
 

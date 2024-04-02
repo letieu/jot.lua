@@ -7,9 +7,16 @@ local M = {}
 ---@return number
 M.view_file = function(file_path, config)
   local note_buf = vim.api.nvim_create_buf(false, true)
-  vim.api.nvim_open_win(note_buf, true, config.win_opts)
-  vim.cmd("edit " .. file_path)
-  vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
+
+  if vim.version()["minor"] > 9 then
+    vim.api.nvim_open_win(note_buf, true, config.win_opts)
+    vim.cmd("edit " .. file_path)
+    vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
+  else
+    vim.cmd("vsplit")
+    local win = vim.api.nvim_get_current_win()
+    vim.api.nvim_win_set_buf(win, note_buf)
+  end
 
   return note_buf
 end
