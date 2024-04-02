@@ -17,7 +17,11 @@ M.view_file = function(file_path, config)
     vim.api.nvim_win_set_buf(win, note_buf)
   end
 
+  -- close buffer when window is closed
   vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
+
+  -- set buffer options to make it writable
+  vim.api.nvim_set_option_value("buftype", "", { buf = note_buf })
 
   return note_buf
 end
