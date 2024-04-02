@@ -12,7 +12,7 @@ M.view_file = function(file_path, config)
     vim.api.nvim_open_win(note_buf, true, config.win_opts)
     vim.cmd("edit " .. file_path)
   else
-    vim.cmd("vsplit")
+    vim.cmd("vsplit " .. file_path)
     local win = vim.api.nvim_get_current_win()
     vim.api.nvim_win_set_buf(win, note_buf)
   end
