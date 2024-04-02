@@ -69,8 +69,6 @@ Customize config to open in floating window
   },
 }
 ```
-}
-```
 
 ## Q&A
 - What differentiates `jot.lua` from `flote.nvim`?
