@@ -6,24 +6,17 @@ local M = {}
 ---@param config table
 ---@return number
 M.view_file = function(file_path, config)
-  local note_buf = vim.api.nvim_create_buf(false, true)
-
   if vim.version()["minor"] > 9 then
+    local note_buf = vim.api.nvim_create_buf(false, true)
     vim.api.nvim_open_win(note_buf, true, config.win_opts)
     vim.cmd("edit " .. file_path)
-  else
-    vim.cmd("vsplit " .. file_path)
-    local win = vim.api.nvim_get_current_win()
-    vim.api.nvim_win_set_buf(win, note_buf)
+    -- close buffer when window is closed
+    vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
+    return note_buf
   end
 
-  -- close buffer when window is closed
-  vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
-
-  -- set buffer options to make it writable
-  vim.api.nvim_set_option_value("buftype", "", { buf = note_buf })
-
-  return note_buf
+  vim.cmd("vsplit " .. file_path)
+  return vim.api.nvim_get_current_buf()
 end
 
 ---@param path string
