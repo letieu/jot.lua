@@ -11,12 +11,13 @@ M.view_file = function(file_path, config)
   if vim.version()["minor"] > 9 then
     vim.api.nvim_open_win(note_buf, true, config.win_opts)
     vim.cmd("edit " .. file_path)
-    vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
   else
     vim.cmd("vsplit")
     local win = vim.api.nvim_get_current_win()
     vim.api.nvim_win_set_buf(win, note_buf)
   end
+
+  vim.api.nvim_set_option_value("bufhidden", "wipe", { buf = note_buf })
 
   return note_buf
 end
