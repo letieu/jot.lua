@@ -26,7 +26,7 @@ M.open = function()
 end
 
 M.setup = function(config)
-  M.config = vim.tbl_deep_extend("force", M.config, config or {})
+  M.config = vim.tbl_extend("force", M.config, config or {})
 end
 
 return M

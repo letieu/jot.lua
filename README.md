@@ -64,8 +64,8 @@ Customize config to open in floating window
     relative = "editor",
     width = 100,
     height = 30,
-    row = 10,
-    col = 50,
+    row = 5,
+    col = 35,
   },
 }
 ```
