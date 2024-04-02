@@ -56,10 +56,12 @@ Default config
 }
 ```
 
-Customize config to open in floating window
+Customize config to open in floating window (Only for neovim 0.10+)
 ```lua
 
 {
+  quit_key = "q",
+  notes_dir = vim.fn.stdpath("data") .. "/jot",
   win_opts = {
     relative = "editor",
     width = 100,
