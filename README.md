@@ -29,12 +29,17 @@ use {
 
 ## Usage
 
-Open
+*Open*
 ```lua
 require('jot').open()
 ```
 
-Close use `quit_key` in config
+*Close* use `quit_key` in config
+
+*Toggle*
+```lua
+require('jot').toggle()
+```
 
 Map open to a key
 ```lua
