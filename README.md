@@ -41,9 +41,20 @@ require('jot').open()
 require('jot').toggle()
 ```
 
-Map open to a key
+**Map open to a key**
 ```lua
 vim.keymap.set("n", "<leader>fj", function() require("jot").open() end, { noremap = true, silent = true })
+```
+
+**Custom window options when open, toggle**
+```lua
+require('jot').toggle({
+  relative = "editor",
+  width = 100,
+  height = 30,
+  row = 5,
+  col = 35,
+})
 ```
 
 ## Config
