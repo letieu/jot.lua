@@ -59,7 +59,7 @@ require('jot').toggle({
 
 ## Config
 
-Default config
+**Default config**
 
 ```lua
 {
@@ -72,7 +72,9 @@ Default config
 }
 ```
 
-Customize config to open in floating window (Only for neovim 0.10+)
+**win_opts** : [neovim docs](https://neovim.io/doc/user/api.html#nvim_open_win())
+
+**Customize** config to open in floating window (Only for neovim 0.10+)
 ```lua
 
 {
