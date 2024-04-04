@@ -1,7 +1,7 @@
 # jot.lua
 ![Screenshot 2024-03-26 at 4 23 29 PM](https://github.com/letieu/jot.lua/assets/53562817/48ead8c9-528f-456e-b972-42a6da1737fe)
 
-The plugin help you have a note per project. When you have an idea, note, something to copy later, just open the window and write it down. The note will be
+A note per project. When you have an idea, note, something to copy later, just open the window and write it down. The note will be
 persisted.
 
 **Features:**
