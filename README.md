@@ -42,7 +42,7 @@ require('jot').toggle()
 
 **Map open to a key**
 ```lua
-vim.keymap.set("n", "<leader>fj", function() require("jot").open() end, { noremap = true, silent = true })
+vim.keymap.set("n", "<leader>fj", function() require("jot").open() end)
 ```
 
 **Custom window options when open, toggle**
