@@ -1,12 +1,12 @@
 # jot.lua
 ![Screenshot 2024-03-26 at 4 23 29 PM](https://github.com/letieu/jot.lua/assets/53562817/48ead8c9-528f-456e-b972-42a6da1737fe)
 
-A note per project. When you have an idea, note, something to copy later, just open the window and write it down. The note will be
+A note file per project. When you have an idea, note, something to copy later, just open the window and write it down. The note will be
 persisted.
 
 **Features:**
 
-* Jot per project in a `markdown` file.
+* Togglable note per project in a `markdown` file.
 * Customizable jot window (Only for neovim 0.10+)
 
 ## Installation
