@@ -4,7 +4,7 @@
 A note file per project. When you have an idea, note, something to copy later, just open the window and write it down. The note will be
 persisted.
 
-**Features:**
+## Features:
 
 * Togglable note per project in a `markdown` file.
 * Customizable jot window (Only for neovim 0.10+)
