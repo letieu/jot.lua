@@ -11,7 +11,7 @@ M.view_file = function(file_path, config)
     return vim.api.nvim_get_current_buf()
   end
 
-  local note_buf = vim.api.nvim_create_buf(false, true)
+  local note_buf = vim.api.nvim_create_buf(true, true)
   vim.api.nvim_open_win(note_buf, true, config.win_opts)
   vim.cmd("edit " .. file_path)
   -- close buffer when window is closed
