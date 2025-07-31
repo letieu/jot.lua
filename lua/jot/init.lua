@@ -7,7 +7,7 @@ M.config = {
   notes_dir = vim.fn.stdpath("data") .. "/jot",
   win_opts = {
     split = "right",
-    focusable = false,
+    focusable = true,
   },
 }
 
